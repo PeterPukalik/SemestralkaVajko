@@ -108,7 +108,7 @@ body{
     -ms-transform: translate(-50%, -50%);
     text-align: center;
 }
-.wraper:hover .image {
+.wraper:hover .backgroundimg {
     opacity: 0.3;
 }
 
@@ -133,4 +133,24 @@ body{
 
 .cardpadding{
     padding: 40px;
+}
+
+.contactCenter{
+    border: 3px solid green;
+
+}
+.my-form {
+    color: #305896;
+}
+.my-form .btn-default {
+    background-color: #305896;
+    color: #fff;
+    border-radius: 0;
+}
+.my-form .btn-default:hover {
+    background-color: #4498C6;
+    color: #fff;
+}
+.my-form .form-control {
+    border-radius: 0;
 }

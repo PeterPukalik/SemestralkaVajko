@@ -9,9 +9,6 @@ h1{
 p{
     font-weight: bold;
 }
-ul {
-    list-style: none;
-}
 
 .wrapper{
     margin: auto;
@@ -21,9 +18,14 @@ ul {
 }
 
 .grey{
-    max-width: 800px;
-    height: 30px;
+    height: 60px;
     padding: 15px 25px;
     background-color: #f7f9fb;
-    border-radius: 30px;
+    border-radius: 20px;
+}
+.right{
+    float: right;
+}
+.insideDiv{
+    display: inline-block;
 }
