@@ -8,12 +8,13 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
   <script src="https://kit.fontawesome.com/b555355c37.js" crossorigin="anonymous"></script>
+  <link rel="icon" type="image/x-icon" href="../img/logo.jpg">
     <title>Kontakt</title>
 </head>
 <body>
 <nav class="navbar navbar-expand-sm">
   <div class="container-fluid">
-    <a class="navbar-brand" href="home.html"><img src="../img/logo.jpg" height="80px" width="80px"></a>
+    <a class="navbar-brand" href="home.html"><img src="../img/logo.jpg" height="80" width="80" alt="logo"></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -26,7 +27,7 @@
           <a class="nav-link active" href="#">2.podlažné</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" href="#">Technicke Informacie</a>
+          <a class="nav-link active" href="technicalInfo.html">Technicke Informacie</a>
         </li>
         <li class="nav-item">
           <a class="nav-link active" href="ObsahDodavky.html">Obsah dodavky</a>
@@ -41,48 +42,46 @@
     </div>
   </div>
 </nav>
-<!--Section: Contact v.2-->
-<section class="mb-4">
-
-  <!--Section heading-->
-  <h2 class="h1-responsive font-weight-bold text-center my-4">Kontaktujte nás</h2>
-  <!--Section description-->
-  <p class="text-center w-responsive mx-auto mb-5">Zaujala Vás naša ponuka ? Neváhajte Nas kontaktovať</p>
-
-
-  <div class="container">
-    <div><h1>Contact Us</h1></div>
-    <br />
-    <div class="row">
-      <div class="col-md-6">
-        <div id="googlemap" style="width:100%; height:350px;"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2601.1720045911106!2d18.784388315690478!3d49.311026179334355!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471443487cd09633%3A0x9153cfe81d537cf8!2sDREVODOMY%20Slovakia%2C%20s.r.o.!5e0!3m2!1sen!2ssk!4v1665751016196!5m2!1sen!2ssk" width="600" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
-
-      </div>
-      <br />
-      <div class="col-md-6">
-        <form class="my-form">
-          <div class="form-group">
-            <label for="form-name">Name</label>
-            <input type="email" class="form-control" id="form-name" placeholder="Name">
-          </div>
-          <div class="form-group">
-            <label for="form-email">Email Address</label>
-            <input type="email" class="form-control" id="form-email" placeholder="Email Address">
-          </div>
-          <div class="form-group">
-            <label for="form-subject">Telephone</label>
-            <input type="text" class="form-control" id="form-subject" placeholder="Subject">
-          </div>
-          <div class="form-group">
-            <label for="form-message">Email your Message</label>
-            <textarea class="form-control" id="form-message" placeholder="Message"></textarea>
-          </div>
-          <button class="btn btn-secondary" type="submit">Contact Us</button>
-        </form>
+<div class="contact4 overflow-hidden position-relative">
+  <!-- Row  -->
+  <div class="row no-gutters">
+    <div class="container">
+      <div class="col-lg-6 contact-box mb-4 mb-md-0">
+        <div class="">
+          <h1 class="title mt-2">Contact Us</h1>
+          <form class="mt-3">
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="form-group mt-2">
+                  <input class="form-control " type="text" placeholder="name">
+                </div>
+              </div>
+              <div class="col-lg-12">
+                <div class="form-group mt-2">
+                  <input class="form-control" type="email" placeholder="email address">
+                </div>
+              </div>
+              <div class="col-lg-12">
+                <div class="form-group mt-2">
+                  <textarea class="form-control " rows="3" placeholder="message"></textarea>
+                </div>
+              </div>
+              <div class="col-lg-12 d-flex align-items-center mt-2">
+                <button type="submit" class="btn bg-white text-inverse px-3 py-2"><span> Submit</span></button>
+                <span class="ml-auto text-white align-self-center"><i class="icon-phone mr-2"></i>251 546 9442</span>
+              </div>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
+    <div class="col-lg-6 right-image p-r-0">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2601.1720045911106!2d18.784388315690478!3d49.311026179334355!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471443487cd09633%3A0x9153cfe81d537cf8!2sDREVODOMY%20Slovakia%2C%20s.r.o.!5e0!3m2!1sen!2ssk!4v1665786878506!5m2!1sen!2ssk"
+              width="100%" height="450" allowfullscreen data-aos="fade-left" class="top-padding"></iframe>
+    </div>
   </div>
-</section>
+</div>
+
 <footer class="footer">
   <div class="footer-left">
     <img src="../img/logo.jpg" height="180px" width="180px" alt="Logo">
