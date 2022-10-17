@@ -9,22 +9,35 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/b555355c37.js" crossorigin="anonymous"></script>
     <link rel="icon" type="image/x-icon" href="../img/logo.jpg">
-    <script
-            src="https://code.jquery.com/jquery-3.3.1.js"
-            integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-            crossorigin="anonymous">
-    </script>
+
     <title>Obsak dodavky</title>
 </head>
 <body>
+<nav class="navbar navbar-expand-sm">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="../html/home.html"><img src="../img/logo.jpg" alt="Logo" height="80" width="80"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ">
 
-<script>
-    $(function(){
-        $("#header").load("header.html");
-        $("#footer").load("footer.html");
-    });
-</script>
-<div id="header"></div>
+                <li class="nav-item">
+                    <a class="nav-link active" href="technicalInfo.html">Technicke Informacie</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="ObsahDodavky.html">Obsah dodavky</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="Contact.html">Kontakt</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Prihlasenie</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
 <header>
     <h1>Predmet dodávky zrubových drevostavieb</h1>
 </header>
@@ -163,7 +176,33 @@
         </ul>
     </div>
 </div>
-<div id="footer"></div>
+
+<footer class="footer">
+    <div class="footer-left">
+        <img src="../img/logo.jpg" height="80" width="80" alt="Logo">
+        <p class="links">
+            <a href="technicalInfo.html"class="prvy">Technicke Informacie</a>
+            <a href="ObsahDodavky.html">Obsah Dodavky</a>
+            <a href="Contact.html" >Kontakt</a>
+        </p>
+        <p class="links">
+            Drevodomy Slovakia s.r.o
+        </p>
+    </div>
+    <div class="footer-center">
+        <i class="fa-solid fa-map-location fa-2x"></i>
+        <p><span>Kysucke nove mesto</span><span>Horna skotna 2054</span></p><br>
+        <i class="fa-solid fa-phone fa-2x"></i>
+        <p><span>0907 881 726</span></p><br>
+        <i class="fa-solid fa-fax fa-2x"></i>
+        <p><span>+421 414 213 535</span></p><br>
+        <i class="fa-solid fa-envelope fa-2x"></i>
+        <p><span>drevodomy@drevodomyslovakia.sk</span></p><br>
+        <i class="fa-brands fa-square-facebook fa-2x" ></i>
+        <p><a href="https://www.facebook.com/DrevodomyKNM" class="links">Aktualne staviame</a></p>
+    </div>
+
+</footer>
 
 </body>
 </html>
