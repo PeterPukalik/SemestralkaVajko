@@ -10,13 +10,10 @@ body{
     box-sizing: border-box;
     text-decoration: none;
     margin: 0 auto;
-    display: inline-block;
+    display: flex;
     width: 100%;
-    padding: 15px 0px 0px 15px;
-}
-.footer .footer-center .footer-left {
-    display: inline-block;
-    vertical-align: top;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 .footer .footer-left{
@@ -43,7 +40,6 @@ body{
 }
 .footer .footer-center{
     width: 50%;
-
     float: left;
 }
 
@@ -63,15 +59,21 @@ body{
 }
 
 
-@media (max-width: 900px){
+@media only screen and (max-width: 760px){
+    .footer{
+        display: flex;
+        flex-direction: column;
+    }
     .footer-center{
         float: none;
         clear:both;
 
     }
     .footer-center .footer-left{
+
         text-align: center;
         width: fit-content;
+
     }
     .footer-left{
         margin-left:20px;
