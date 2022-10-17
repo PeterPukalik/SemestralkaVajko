@@ -78,6 +78,11 @@ body{
     .footer-left{
         margin-left:20px;
     }
+    .card{
+        width: 70%;
+        margin: 0 auto;
+        padding-bottom: 10px;
+    }
 }
 
 .center{
@@ -211,4 +216,9 @@ p{
 }
 .insideDiv{
     display: inline-block;
+}
+.card{
+    width: 60%;
+    margin: 0 auto;
+    padding-bottom: 10px;
 }
