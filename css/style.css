@@ -1,7 +1,7 @@
-nav{
+nav {
     background-color: lightgrey;
 }
-body{
+body {
     background-color: #EFEDE2;
 }
 .footer {
@@ -80,7 +80,7 @@ body{
         margin-left:20px;
     }
     .card{
-        width: 70%;
+        width: 80%;
         margin: 0 auto;
         padding-bottom: 10px;
     }
@@ -219,7 +219,7 @@ p{
     display: inline-block;
 }
 .card{
-    width: 60%;
+    width: 50%;
     margin: 0 auto;
     padding-bottom: 10px;
 }
