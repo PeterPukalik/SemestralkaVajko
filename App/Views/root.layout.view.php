@@ -16,33 +16,36 @@
             crossorigin="anonymous"></script>
     <link rel="stylesheet" href="public/css/styl.css">
     <script src="public/js/script.js"></script>
+    <link rel="icon" type="image/x-icon" href="img/logo.jpg">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<nav class="navbar navbar-expand-sm bg-light">
+<nav class="navbar navbar-expand-sm">
     <div class="container-fluid">
-        <a class="navbar-brand" href="?c=home">
-            <img src="public/images/vaiicko_logo.png" title="<?= \App\Config\Configuration::APP_NAME ?>"
-                 title="<?= \App\Config\Configuration::APP_NAME ?>">
-        </a>
-        <ul class="navbar-nav me-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="?c=home&a=contact">Kontakt</a>
-            </li>
-        </ul>
-        <?php if ($auth->isLogged()) { ?>
-            <span class="navbar-text">Prihlásený používateľ: <b><?= $auth->getLoggedUserName() ?></b></span>
-            <ul class="navbar-nav ms-auto">
+        <a class="navbar-brand" href="?c=home"><img src="img/logo.jpg" alt="Logo" ></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ">
                 <li class="nav-item">
-                    <a class="nav-link" href="?c=auth&a=logout">Odhlásenie</a>
+                    <a class="nav-link active" href="?c=home#Onas">O nas</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="?c=info">Technicke Informacie</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="?c=obsah">Obsah dodavky</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="?c=contact">Kontakt</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Prihlasenie</a>
                 </li>
             </ul>
-        <?php } else { ?>
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="<?= \App\Config\Configuration::LOGIN_URL ?>">Prihlásenie</a>
-                </li>
-            </ul>
-        <?php } ?>
+        </div>
     </div>
 </nav>
 <div class="container-fluid mt-3">
@@ -50,5 +53,29 @@
         <?= $contentHTML ?>
     </div>
 </div>
+<footer class="footer">
+    <div class="footer-left">
+        <img src="img/logo.jpg" height="80" width="80" alt="Logo">
+        <p class="links">
+            <a href="?c=info" class="prvy">Technicke Informacie</a>
+            <a href="?c=obsah">Obsah Dodavky</a>
+            <a href="?c=contact" >Kontakt</a>
+        </p>
+        <p class="links">
+            Drevodomy Slovakia s.r.o
+        </p>
+    </div>
+    <div class="footer-center">
+        <i class="fa-solid fa-map-location fa-2x"></i>
+        <p><span class="paddingLeft">Kysucke nove mesto</span><span class="paddingLeft">Horna skotna 2054</span></p><br>
+        <i class="fa-solid fa-phone fa-2x"></i>
+        <p><span>0907 881 726</span></p><br>
+        <!--        <i class="fa-solid fa-fax fa-2x"></i>-->
+        <!--        <p><span>+421 414 213 535</span></p><br>-->
+        <i class="fa-solid fa-envelope fa-2x"></i>
+        <p class="paddingLeft"><span>drevodomy@drevodomyslovakia.sk</span></p>
+    </div>
+
+</footer>
 </body>
 </html>
