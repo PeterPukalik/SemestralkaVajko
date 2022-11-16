@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use App\Core\AControllerBase;
 use App\Core\Responses\Response;
+use App\Models\Houses;
 
 /**
  * Class HomeController
@@ -29,7 +30,8 @@ class HomeController extends AControllerBase
      */
     public function index(): Response
     {
-        return $this->html();
+        $domy = Houses::getAll();
+        return $this->html($domy);
     }
 
     /**
