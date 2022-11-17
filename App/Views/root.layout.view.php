@@ -42,7 +42,7 @@
                     <a class="nav-link active" href="?c=contact">Kontakt</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Prihlasenie</a>
+                    <a class="nav-link active" href="?c=auth">Prihlasenie</a>
                 </li>
             </ul>
         </div>
