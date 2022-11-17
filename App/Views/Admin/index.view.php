@@ -31,7 +31,7 @@
                 <h5 class="card-title">Edituj ponuku</h5>
                 <p class="card-text">Pridavaj a odoberaj domy z ponuky.</p>
                 <a href="?c=houses&a=add" class="btn btn-primary">Pridavaj Ponuku</a>
-                <a href="#" class="btn btn-danger">Odoberaj/Edituj ponuku</a>
+                <a href="?c=home" class="btn btn-danger">Odoberaj/Edituj ponuku</a>
             </div>
         </div>
     </div>

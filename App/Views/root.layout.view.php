@@ -41,9 +41,18 @@
                 <li class="nav-item">
                     <a class="nav-link active" href="?c=contact">Kontakt</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link active" href="?c=auth">Prihlasenie</a>
-                </li>
+                <?php if ($auth->isLogged()) { ?>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="?c=auth&a=logout">Odhlasit</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="?c=admin">Admin</a>
+                    </li>
+                <?php } else { ?>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="?c=auth&a=login">Prihlasenie</a>
+                    </li>
+                <?php } ?>
             </ul>
         </div>
     </div>

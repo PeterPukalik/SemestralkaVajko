@@ -9,6 +9,12 @@ use App\Models\Houses;
 class HousesController extends  AControllerBase
 {
 
+    public function authorize(string $action)
+    {
+        return true;
+    }
+
+
     public function add() : Response
     {
         $data = $this->request()->getPost();
@@ -21,10 +27,7 @@ class HousesController extends  AControllerBase
             $post->setInfo($data["info"]);
             $post->save();
             ?><script>
-
-                window.onload = function(){
-                    window.open(localhost/SemestralkaVajko/?c=home, "_blank"); // will open new tab on window.onload
-                }
+                    window.open("?c=home", "_blank"); // will open new tab on window.onload
             </script><?php
         }
 
@@ -35,4 +38,40 @@ class HousesController extends  AControllerBase
     {
         return $this->html();
     }
+
+
+    public function delete() : Response {
+        $id = $this->request()->getValue("id");
+        $post = Houses::getOne($id);
+        if($post != null){
+            $post->delete();
+        }
+
+        return $this->redirect("?c=home");
+
+
+    }
+
+    public function edit(): Response
+    {
+        $id = $this->request()->getValue("id");
+        $post = Houses::getOne($id);
+        $data = $this->request()->getPost();
+        if($post != null){
+            if(isset($data["nazov"])){ //isset ci exizstuje a empty ci ej zadane cosi
+                $post->setNazov($data["nazov"]);
+                $post->setPopis($data["popis"]);
+                $post->setCena($data["cena"]);
+                $post->setFoto($data["foto"]);
+                $post->setInfo($data["info"]);
+                $post->save();
+                return $this->redirect("?c=home");
+            }
+        }
+
+        return $this->html($post,"add");
+    }
+
+
+
 }

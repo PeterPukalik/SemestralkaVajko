@@ -13,6 +13,7 @@ class Houses extends Model
     protected string $foto = "";
     protected string $popis = "";
     protected string $info = "";
+    protected int $id;
 
     /**
      * @return int
@@ -21,6 +22,15 @@ class Houses extends Model
     {
         return $this->cena;
     }
+
+    /**
+     * @return string
+     */
+    public function getId(): int
+    {
+        return $this->id;
+    }
+
 
     /**
      * @param int $cena

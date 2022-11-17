@@ -2,7 +2,6 @@
 
 
 
-<!--<form action="?c=posts&a=--><?//=($data->getId() == 0 ? "add" : "edit") ?><!--" method="post">-->
 <form action="?c=posts&a=edit" method="post">
     <div class="form-group">
         <label for="exampleFormControlInput1">Title</label>
