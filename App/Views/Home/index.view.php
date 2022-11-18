@@ -46,7 +46,7 @@
         <h5 class="card-title"><?=$item->getNazov()?></h5>
         <p class="card-text"><?=$item->getPopis()?></p>
         <!-- Button trigger modal -->
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal1">
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal<?=$item->getId()?>">
             Viac info
         </button>
         <?php if ($auth->isLogged()) { ?>
@@ -54,11 +54,11 @@
             <a href="?c=houses&a=delete&id=<?=$item->getId()?>" class="btn btn-danger">Delete</a>
         <?php }?>
         <!-- Modal -->
-        <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel1" aria-hidden="true">
+        <div class="modal fade" id="exampleModal<?=$item->getId()?>" tabindex="-1" aria-labelledby="exampleModalLabel<?=$item->getId()?>" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="exampleModalLabel1"><?=$item->getCena()?></h1>
+                        <h1 class="modal-title fs-5" id="exampleModalLabel<?=$item->getId()?>"><?=$item->getCena()?></h1>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">

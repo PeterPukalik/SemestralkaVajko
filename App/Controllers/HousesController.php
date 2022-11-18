@@ -69,7 +69,7 @@ class HousesController extends  AControllerBase
             }
         }
 
-        return $this->html($post,"add");
+        return $this->html($post,"edit");
     }
 
 
