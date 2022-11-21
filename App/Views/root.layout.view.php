@@ -15,7 +15,7 @@
             integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
             crossorigin="anonymous"></script>
     <link rel="stylesheet" href="public/css/styl.css">
-    <script src="public/js/script.js"></script>
+    <script src="js/myScript.js"></script>
     <link rel="icon" type="image/x-icon" href="img/logo.jpg">
     <link rel="stylesheet" href="css/style.css">
 </head>

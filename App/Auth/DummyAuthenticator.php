@@ -11,7 +11,7 @@ use App\Core\IAuthenticator;
  */
 class DummyAuthenticator implements IAuthenticator
 {
-    const LOGIN = "admin";
+    const LOGIN = "pukalik1@stud.uniza.sk";
     const PASSWORD_HASH = '$2y$10$GRA8D27bvZZw8b85CAwRee9NH5nj4CQA6PDFMc90pN9Wi4VAWq3yq'; // admin
     const USERNAME = "Admin";
 

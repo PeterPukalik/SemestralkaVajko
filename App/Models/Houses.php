@@ -8,11 +8,11 @@ class Houses extends Model
 {
 
 
-    protected int $cena = 0;
-    protected string $nazov = "";
-    protected string $foto = "";
-    protected string $popis = "";
-    protected string $info = "";
+    protected int $cena;
+    protected string $nazov ;
+    protected string $foto ;
+    protected string $popis;
+    protected string $info ;
     protected int $id;
 
     /**
