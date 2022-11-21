@@ -9,7 +9,7 @@ function validateForm() {
         alert("Musis zadat popis");
         return false;
     }
-    if(popis.length >= 10){
+    if(popis.length <= 10){
         alert("Popis musi obsahovat aspon 10 znakov");
         return false;
     }
@@ -19,14 +19,10 @@ function validateForm() {
         return false;
     }
     let cena = document.forms["addHouse"]["cena"].value;
-    if(typeof cena == "string"){
+    if(isNaN(cena) || cena <= 0 ){
         alert("musis zadat kladne cislo");
         return false;
     }
-    // let cena = document.forms["addHouse"]["cena"].value;
-    // if (cena  < 0) {
-    //     alert("nemoze byt zaporna cena");
-    //     return false;
-    // }
+
     return true;
 }
