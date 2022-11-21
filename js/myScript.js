@@ -1,11 +1,11 @@
 function validateForm() {
     let name = document.forms["addHouse"]["nazov"].value;
-    if (name == "") {
+    if (name === "") {
         alert("Name must be filled out");
         return false;
     }
     let popis = document.forms["addHouse"]["popis"].value;
-    if(popis == "") {
+    if(popis === "") {
         alert("Musis zadat popis");
         return false;
     }
@@ -14,7 +14,7 @@ function validateForm() {
         return false;
     }
     let odkaz = document.forms["addHouse"]["foto"].value;
-    if (odkaz == "") {
+    if (odkaz === "") {
         alert("musis zadat odkaz alebo cestu k fotke");
         return false;
     }
