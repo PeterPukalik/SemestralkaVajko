@@ -41,7 +41,7 @@
 <!--    databaza-->
 <?php foreach ($data as $item) { ?>
 <div class="card mb-3" >
-    <img src="<?=$item->getFoto()?>" class="card-img-top" alt="Duben">
+    <img src="<?=$item->getFoto()?>" class="card-img-top" alt="...">
     <div class="card-body">
         <h5 class="card-title"><?=$item->getNazov()?></h5>
         <p class="card-text"><?=$item->getPopis()?></p>
