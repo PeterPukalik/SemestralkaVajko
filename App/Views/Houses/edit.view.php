@@ -1,6 +1,8 @@
 <?php /* @var \App\Models\Houses $data */ ?>
 
-<form action="?c=houses&a=edit" method="post">
+<script src="js/myScript.js"></script>
+
+<form action="?c=houses&a=edit" method="post" name="addHouse" onsubmit="return validateForm()" >
 
     <div class="form-group">
 
