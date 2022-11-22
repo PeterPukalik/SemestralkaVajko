@@ -64,5 +64,29 @@
         <?= $contentHTML ?>
     </div>
 </div>
+<footer class="footer">
+    <div class="footer-left">
+        <img src="img/logo.jpg" height="80" width="80" alt="Logo">
+        <p class="links">
+            <a href="?c=info" class="prvy">Technicke Informacie</a>
+            <a href="?c=obsah">Obsah Dodavky</a>
+            <a href="?c=contact" >Kontakt</a>
+        </p>
+        <p class="links">
+            Drevodomy Slovakia s.r.o
+        </p>
+    </div>
+    <div class="footer-center">
+        <i class="fa-solid fa-map-location fa-2x"></i>
+        <p><span class="paddingLeft">Kysucke nove mesto</span><span class="paddingLeft">Horna skotna 2054</span></p><br>
+        <i class="fa-solid fa-phone fa-2x"></i>
+        <p><span>0907 881 726</span></p><br>
+        <!--        <i class="fa-solid fa-fax fa-2x"></i>-->
+        <!--        <p><span>+421 414 213 535</span></p><br>-->
+        <i class="fa-solid fa-envelope fa-2x"></i>
+        <p class="paddingLeft"><span>drevodomy@drevodomyslovakia.sk</span></p>
+    </div>
+
+</footer>
 </body>
 </html>

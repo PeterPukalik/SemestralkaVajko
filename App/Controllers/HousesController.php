@@ -30,7 +30,7 @@ class HousesController extends  AControllerBase
 
 
 
-            if(!preg_match("/^[0-9]$/",$cena)) {
+            if(preg_match("/^[0-9]$/",$cena)) {
                 echo "<div class='text-danger'>Zadal si neplatnu sumu, musi obsahovat len cisla</div><br>";
             }
             elseif(!(strlen($nazov) > 0) && !(strlen($nazov) < 100)){
@@ -46,7 +46,7 @@ class HousesController extends  AControllerBase
 
             }
             elseif(!(strlen($info) < 5000)){
-                echo "<div class='text-danger'>Popis musi byt vyplneny</div><br>";
+                echo "<div class='text-danger'>info musi byt vyplneny</div><br>";
             }
             else {
                 $post = new Houses();
