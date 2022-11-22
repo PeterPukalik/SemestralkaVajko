@@ -16,6 +16,7 @@
             crossorigin="anonymous"></script>
     <link rel="stylesheet" href="public/css/styl.css">
     <script src="js/myScript.js"></script>
+    <script src="https://kit.fontawesome.com/b555355c37.js" crossorigin="anonymous"></script>
     <link rel="icon" type="image/x-icon" href="img/logo.jpg">
     <link rel="stylesheet" href="css/style.css">
 </head>
