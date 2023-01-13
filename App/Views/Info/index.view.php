@@ -1,3 +1,6 @@
+<head>
+    <title>DrevodomySlovakia - Technicke Informacie</title>
+</head>
 <header>
     <h1>Technicke Informacie</h1>
 </header>

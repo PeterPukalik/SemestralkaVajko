@@ -3,7 +3,7 @@
 
 
 ?>
-
+<title>DrevodomySlovakia</title>
 <body class="body">
 
 <div class="textpadding" id="Onas">
@@ -39,6 +39,11 @@
         <?php if ($auth->isLogged()) { ?>
             <a href="?c=houses&a=edit&id=<?=$item->getId()?>" class="btn btn-secondary">Edit</a>
             <a href="?c=houses&a=delete&id=<?=$item->getId()?>" class="btn btn-danger">Delete</a>
+            <dialog id="myDialog" onclick="return dialog()">
+                <p>Are you sure you want to continue?</p>
+                <button id="yesBtn" class="btn btn-primary" >Yes</button>
+                <button id="noBtn" class="btn btn-primary">No</button>
+            </dialog>
         <?php }?>
         <!-- Modal -->
         <div class="modal fade" id="exampleModal<?=$item->getId()?>" tabindex="-1" aria-labelledby="exampleModalLabel<?=$item->getId()?>" aria-hidden="true">
