@@ -19,15 +19,47 @@ class SaleController extends AControllerBase
         $data = Sale::getAll();
         return $this->html($data);
     }
-    public function edit(): Response {
+
+    public function delete(): Response
+    {
         $id = $this->request()->getValue("id");
-        $post = Sale::getOne($id);
-        $data = $this->request()->getPost();
-        if($post != null){
-            
+        $sale = Sale::getOne($id);
+        if($sale != null){
+            $sale->delete();
         }
 
-        return $this->html();
+        return $this->redirect("?c=home");
+    }
+    public function add(): Response
+    {
+        $data = $this->request()->getPost();
+        if(isset($data["name"])){ //isset ci exizstuje a empty ci ej zadane cosi
+            $sale = new Sale();
+            $sale->setCity($data["city"]);
+            $sale->setName($data["name"]);
+            $sale->setPhoto($data["photo"]);
+            $sale->save();
+            return $this->redirect("?c=home");
+        }
+        return $this->html(new Sale());
+    }
+
+    public function edit(): Response {
+        $id = $this->request()->getValue("id");
+        $sale = Sale::getOne($id);
+        $data = $this->request()->getPost();
+        if($sale != null){
+            if(isset($data['name'])){
+                $sale->setCity($data["city"]);
+                $sale->setName($data["name"]);
+                $sale->setPhoto($data["photo"]);
+                $sale->save();
+                return $this->redirect("?c=home");
+            }
+
+        }
+
+        return $this->html($sale,"edit");
     }
 
 }

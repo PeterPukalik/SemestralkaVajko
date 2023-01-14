@@ -39,9 +39,10 @@
     <div class="col-sm-6">
         <div class="card">
             <div class="card-body">
-                <h5 class="card-title">Este neviem</h5>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A blanditiis dolore enim fugiat id incidunt iste, iure laudantium libero nobis odit officia officiis porro possimus quibusdam quidem, sed tenetur velit.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <h5 class="card-title">Edituj krajiny</h5>
+                <p class="card-text">Pridavaj a odoberaj krajiny z ponuky.</p>
+                <a href="?c=sale&a=add" class="btn btn-primary">Pridavaj krajiny</a>
+                <a href="?c=home" class="btn btn-danger">Odoberaj/Edituj krajiny</a>
             </div>
         </div>
     </div>
