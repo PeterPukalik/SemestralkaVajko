@@ -39,7 +39,10 @@
                     <a class="nav-link active" href="?c=obsah">Obsah dodavky</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="?c=contact">Kontakt</a>
+                    <a class="nav-link active" href="?c=contact" >Kontakt</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="?c=sale">Krajiny posobenia</a>
                 </li>
                 <?php if ($auth->isLogged()) { ?>
                     <li class="nav-item">

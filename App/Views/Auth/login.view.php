@@ -29,7 +29,7 @@ $layout = 'auth';
                                 <label class="form-label">Password</label>
                             </div>
 
-                            <p class="small mb-5 pb-lg-2"><a class="text-white-50" href="?c=">Este nemas ucet ? Registruj sa</a></p>
+                            <p class="small mb-5 pb-lg-2"><a class="text-white-50" href="?c=user&a=register">Este nemas ucet ? Registruj sa</a></p>
 
                                 <button class="btn btn-primary" type="submit" name="submit">Login
                                 </button>
