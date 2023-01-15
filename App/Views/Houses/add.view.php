@@ -14,6 +14,11 @@
         <input name="cena" class="form-control" id="cena">
         <label>Info</label>
         <textarea name="info" class="form-control"  rows="3"></textarea>
+<!--            <div class="form-group">-->
+<!--                <label for="exampleFormControlFile1">Example file input</label>-->
+<!--                <input type="file" name="foto" class="form-control-file" id="exampleFormControlFile1">-->
+<!--            </div>-->
+
     </div>
 
     <button type="submit" class="btn btn-primary">Submit</button>

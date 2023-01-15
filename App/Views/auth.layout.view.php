@@ -46,6 +46,10 @@
                 <li class="nav-item">
                     <a class="nav-link active" href="?c=sale">Krajiny posobenia</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="?c=review">Recenzie</a>
+                </li>
+
                 <?php if ($auth->isLogged()) { ?>
                     <li class="nav-item">
                         <a class="nav-link active" href="?c=auth&a=logout">Odhlasit</a>

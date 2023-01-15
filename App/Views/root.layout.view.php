@@ -44,12 +44,15 @@
                 <li class="nav-item">
                     <a class="nav-link active" href="?c=sale">Krajiny posobenia</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="?c=review">Recenzie</a>
+                </li>
                 <?php if ($auth->isLogged()) { ?>
                     <li class="nav-item">
                         <a class="nav-link active" href="?c=auth&a=logout">Odhlasit</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="?c=admin">Admin</a>
+                        <a class="nav-link active" href="?c=admin"><?=$auth->getLoggedUserName()?></a>
                     </li>
                 <?php } else { ?>
                     <li class="nav-item">

@@ -9,7 +9,7 @@
         <input name="photo" class="form-control" value="<?=$data->getPhoto()?>">
         <label >Mesto</label>
         <input name="city" class="form-control" id="mesto" value="<?=$data->getCity()?>">
-
+        <br>
     </div>
 
     <button type="submit" class="btn btn-primary">Submit</button>
