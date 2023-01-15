@@ -5,7 +5,8 @@
 <!DOCTYPE html>
 <html lang="sk">
 <head>
-    <title><?= \App\Config\Configuration::APP_NAME ?></title>
+<!--    <title>--><?//= \App\Config\Configuration::APP_NAME ?><!--</title>-->
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
@@ -42,6 +43,13 @@
                 <li class="nav-item">
                     <a class="nav-link active" href="?c=contact">Kontakt</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="?c=sale">Krajiny posobenia</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="?c=review">Recenzie</a>
+                </li>
+
                 <?php if ($auth->isLogged()) { ?>
                     <li class="nav-item">
                         <a class="nav-link active" href="?c=auth&a=logout">Odhlasit</a>

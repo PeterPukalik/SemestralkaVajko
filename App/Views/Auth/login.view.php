@@ -2,7 +2,7 @@
 $layout = 'auth';
 /** @var Array $data */
 ?>
-
+<title>DrevodomySlovakia - Login</title>
 <section class="vh-100 gradient-custom">
     <div class="container py-5 h-100">
         <div class="row d-flex justify-content-center align-items-center h-100">
@@ -29,7 +29,7 @@ $layout = 'auth';
                                 <label class="form-label">Password</label>
                             </div>
 
-                            <p class="small mb-5 pb-lg-2"><a class="text-white-50" href="#!">Este nemas ucet ? Registruj sa</a></p>
+                            <p class="small mb-5 pb-lg-2"><a class="text-white-50" href="?c=user&a=register">Este nemas ucet ? Registruj sa</a></p>
 
                                 <button class="btn btn-primary" type="submit" name="submit">Login
                                 </button>

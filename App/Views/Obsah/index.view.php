@@ -1,3 +1,8 @@
+<head>
+    <title>DrevodomySlovakia - Predmet dodávky zrubových drevostavieb</title>
+</head>
+
+
 <header>
     <h1>Predmet dodávky zrubových drevostavieb</h1>
 </header>

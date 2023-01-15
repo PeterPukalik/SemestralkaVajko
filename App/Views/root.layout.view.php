@@ -2,10 +2,9 @@
 /** @var string $contentHTML */
 /** @var \App\Core\IAuthenticator $auth */
 ?>
-<!DOCTYPE html>
 <html lang="sk">
 <head>
-    <title><?= \App\Config\Configuration::APP_NAME ?></title>
+<!--    <title>--><?//= \App\Config\Configuration::APP_NAME ?><!--</title>-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
@@ -16,6 +15,7 @@
             crossorigin="anonymous"></script>
     <link rel="stylesheet" href="public/css/styl.css">
     <script src="js/myScript.js"></script>
+    <script src="https://kit.fontawesome.com/b555355c37.js" crossorigin="anonymous"></script>
     <link rel="icon" type="image/x-icon" href="img/logo.jpg">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -39,14 +39,20 @@
                     <a class="nav-link active" href="?c=obsah">Obsah dodavky</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="?c=contact">Kontakt</a>
+                    <a class="nav-link active" href="?c=contact" >Kontakt</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="?c=sale">Krajiny posobenia</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="?c=review">Recenzie</a>
                 </li>
                 <?php if ($auth->isLogged()) { ?>
                     <li class="nav-item">
                         <a class="nav-link active" href="?c=auth&a=logout">Odhlasit</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="?c=admin">Admin</a>
+                        <a class="nav-link active" href="?c=admin"><?=$auth->getLoggedUserName()?></a>
                     </li>
                 <?php } else { ?>
                     <li class="nav-item">

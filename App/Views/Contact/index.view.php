@@ -1,4 +1,8 @@
 <?php /** @var Array $data */ ?>
+<head>
+    <title>DrevodomySlovakia - Kontakt</title>
+    <script src="js/myScript.js"></script>
+</head>
 <div class="container py-4">
     <h1>Kontaktuje nas</h1>
     <!-- Bootstrap 5 starter form -->
