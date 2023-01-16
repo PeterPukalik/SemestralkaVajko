@@ -25,7 +25,7 @@
     </div>
 </div>
 <br>
-<div class="row">
+<div class="row bodysize body">
     <div class="col-sm-6">
         <div class="card">
             <div class="card-body">

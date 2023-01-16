@@ -2,12 +2,17 @@
 
 namespace App\Controllers;
 
+use App\Config\Configuration;
 use App\Core\AControllerBase;
+use App\Core\Model;
 use App\Core\Responses\Response;
 use App\Models\Sale;
+use PDO;
+use PDOException;
 
 class SaleController extends AControllerBase
 {
+
 
     public function index(): Response
     {
@@ -43,6 +48,8 @@ class SaleController extends AControllerBase
         }
         return $this->html(new Sale());
     }
+
+
 
     public function edit(): Response {
         $id = $this->request()->getValue("id");

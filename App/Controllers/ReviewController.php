@@ -26,7 +26,7 @@ class ReviewController extends AControllerBase
             $review->setReview($data["review"]);
             $review->setStars($data["stars"]);
             $review->save();
-            return $this->redirect("?c=review");
+            return $this->html(true);
         }
         return $this->html(new Review());
     }

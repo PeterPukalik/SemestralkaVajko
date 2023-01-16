@@ -34,7 +34,6 @@ class UserController extends AControllerBase
         if (isset($data["login"])) {
             $user = new User();
             $user->setLogin($data["login"]);
-
             $password = password_hash($data["password"], PASSWORD_BCRYPT);
             $user->setPassword($password);
             $user->save();

@@ -232,3 +232,15 @@ p{
     max-height: 150px;
     max-width: 150px;
 }
+.materialypictues{
+    display: flex;
+}
+.materialypicturesinsidediv{
+    max-width: 100%;
+    max-height: 500px;
+    flex: 1;
+    padding: 10px;
+}
+.bodysize{
+    min-height: 100vh;
+}

@@ -47,6 +47,9 @@
                 <li class="nav-item">
                     <a class="nav-link active" href="?c=review">Recenzie</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="?c=material">Materiály</a>
+                </li>
                 <?php if ($auth->isLogged()) { ?>
                     <li class="nav-item">
                         <a class="nav-link active" href="?c=auth&a=logout">Odhlasit</a>
