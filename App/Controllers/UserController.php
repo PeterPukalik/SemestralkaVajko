@@ -32,6 +32,27 @@ class UserController extends AControllerBase
     public function register(): Response{
         $data = $this->request()->getPost();
         if (isset($data["login"])) {
+            $allreadyRegisted = User::getAll();
+            $name = $_POST['login'];
+            $pass = $_POST['password'];
+            if(!(strlen($name) > 0) && !(strlen($name) < 100)){
+                $data = ['error' => 'Neplatny loggin'];
+                return $this->html($data);
+            }
+
+            elseif(!(strlen($pass) > 0) && !(strlen($pass) < 150)){
+                $data = ['error' => 'Neplatny loggin'];
+                return $this->html($data);
+            }
+            foreach ($allreadyRegisted as $person){
+                if($person->getLogin() == $data["login"]){
+                    return $this->html(['error'=>'Login uz sa poziva']);
+                }
+            }
+
+
+
+
             $user = new User();
             $user->setLogin($data["login"]);
             $password = password_hash($data["password"], PASSWORD_BCRYPT);

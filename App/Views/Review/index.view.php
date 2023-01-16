@@ -15,7 +15,6 @@
     </div>
         <div class="row text-center">
         <?php foreach ($data as $item) { ?>
-
             <div class="col-md-6 mb-4 mb-md-5">
                 <div class="card">
                     <div class="card-body py-4 mt-2">
@@ -33,7 +32,7 @@
                             </li>
                             <?php }?>
                         </ul>
-                        <span class="mb-2">
+                        <span class="mb-4">
                             <i class="fas fa-quote-left pe-2"><?=$item->getReview()?></i>
                         </span>
                     </div>
