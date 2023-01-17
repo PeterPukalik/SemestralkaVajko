@@ -8,8 +8,10 @@ $layout = "no";
     <div class="card carpenterCard">
         <h5 class="card-title"><?=$item->getName()?></h5>
         <img class="card-img-top" src="<?=$item->getPicture()?>" alt="Card image cap">
+        <?php if ($auth->isLogged()) { ?>
         <?php if($auth->getLoggedUserName() == 'admin' ){?>
             <a href="#" class="btn btn-danger" onclick="return confirmDeleteCarpenter (<?=$item->getId()?>)">Delete</a>
+        <?php }?>
         <?php }?>
     </div>
     <?php }?>

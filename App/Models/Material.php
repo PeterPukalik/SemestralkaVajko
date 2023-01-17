@@ -11,6 +11,23 @@ class Material extends Model
     protected string $type_wood;
     protected string $name;
     protected string $benefits;
+    protected string $photo;
+
+    /**
+     * @return string
+     */
+    public function getPhoto(): string
+    {
+        return $this->photo;
+    }
+
+    /**
+     * @param string $photo
+     */
+    public function setPhoto(string $photo): void
+    {
+        $this->photo = $photo;
+    }
 
     /**
      * @return int

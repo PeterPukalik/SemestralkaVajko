@@ -11,9 +11,11 @@ $layout = "no";
     <tr>
         <th scope="col">Nazov</th>
         <th scope="col">Benefit</th>
-        <th scope="col">Handle</th>
+        <th scope="col">Fotka</th>
+        <?php if ($auth->isLogged()) { ?>
         <?php if ($auth->getLoggedUserName()=='admin') { ?>
             <th scope="col">Edit</th>
+        <?php }?>
         <?php }?>
     </tr>
     </thead>
@@ -23,11 +25,14 @@ $layout = "no";
     <tr>
         <td><?=$item->getName()?></td>
         <td><?=$item->getBenefits()?></td>
-        <td><?=$item->getBenefits()?></td>
+
+        <td><img src="<?=$item->getPhoto()?>" class="img_table"></td>
+            <?php if ($auth->isLogged()) { ?>
         <?php if ($auth->getLoggedUserName()=='admin') { ?>
             <td>
                  <a href="#" class="btn btn-danger" onclick="return confirmMaterialDel(<?=$item->getId()?>)">Delete</a>
             </td>
+        <?php }?>
         <?php }?>
     </tr>
     <?php }?>
@@ -42,9 +47,11 @@ $layout = "no";
     <tr>
         <th scope="col">Nazov</th>
         <th scope="col">Benefit</th>
-        <th scope="col">Handle</th>
+        <th scope="col">Fotka</th>
+        <?php if ($auth->isLogged()) { ?>
         <?php if ($auth->getLoggedUserName()=='admin') { ?>
             <th scope="col">Edit</th>
+        <?php }?>
         <?php }?>
     </tr>
     </thead>
@@ -54,11 +61,14 @@ $layout = "no";
             <tr>
                 <td><?=$item->getName()?></td>
                 <td><?=$item->getBenefits()?></td>
-                <td><?=$item->getBenefits()?></td>
+
+                <td><img src="<?=$item->getPhoto()?>" class="img_table"></td>
+            <?php if ($auth->isLogged()) { ?>
                 <?php if ($auth->getLoggedUserName()=='admin') { ?>
                     <td>
                         <a href="#" class="btn btn-danger" onclick="return confirmMaterialDel(<?=$item->getId()?>)">Delete</a>
                     </td>
+                <?php }?>
                 <?php }?>
             </tr>
         <?php }?>

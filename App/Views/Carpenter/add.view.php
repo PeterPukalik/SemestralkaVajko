@@ -3,6 +3,7 @@
 
 <script src="js/myScript.js"></script>
 <div class="bodysize">
+
     <form action="?c=carpenter&a=add" method="post" name="addCarpenter" onsubmit="return validateCarpenterForm()" >
         <div class="form-group">
             <?php foreach ($data as $item) { ?>
