@@ -19,4 +19,15 @@ class MaterialController extends AControllerBase
         $data = Material::getAll();
         return $this->html($data);
     }
+
+    public function delete(): Response
+    {
+        $id = $this->request()->getValue("id");
+        $sale = Material::getOne($id);
+        if($sale != null){
+            $sale->delete();
+        }
+
+        return $this->redirect("?c=material");
+    }
 }

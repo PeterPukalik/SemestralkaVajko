@@ -5,44 +5,24 @@
 </head>
 <div class="container py-4">
     <h1>Kontaktuje nas</h1>
-    <!-- Bootstrap 5 starter form -->
-    <form id="contactForm" data-sb-form-api-token="API_TOKEN">
-
-        <!-- Name input -->
+    <form id="contactForm" name="contactForm" action="" method="post" onsubmit="return validateContactForm()" action="?c=contact">
         <div class="mb-3">
             <label class="form-label" for="name">Meno</label>
-            <input class="form-control" id="name" type="text" placeholder="Meno" data-sb-validations="required" >
-            <div class="invalid-feedback" data-sb-feedback="name:required">Meno je nutne zadat.</div>
+            <input class="form-control" id="name" type="text" placeholder="Meno">
         </div>
-
         <!-- Email address input -->
         <div class="mb-3">
             <label class="form-label" for="emailAddress">Email</label>
-            <input class="form-control" id="emailAddress" type="email" placeholder="Email" data-sb-validations="required, email" >
-            <div class="invalid-feedback" data-sb-feedback="emailAddress:required">Email Address je nutne zadat.</div>
-            <div class="invalid-feedback" data-sb-feedback="emailAddress:email">Email Address Email nieje validna.</div>
+            <input class="form-control" id="emailAddress" type="email" placeholder="Email">
         </div>
 
-        <!-- Message input -->
         <div class="mb-3">
             <label class="form-label" for="message">Sprava</label>
-            <textarea class="form-control" id="message" placeholder="Sprava" style="height: 10rem;" data-sb-validations="required"></textarea>
-            <div class="invalid-feedback" data-sb-feedback="message:required">toto pole je nutne vyplnit.</div>
+            <textarea class="form-control" id="message" placeholder="Sprava"  ></textarea>
         </div>
-
-        <!-- Form submissions success message -->
-        <div class="d-none" id="submitSuccessMessage">
-            <div class="text-center mb-3">Form submission successful!</div>
-        </div>
-
-        <!-- Form submissions error message -->
-        <div class="d-none" id="submitErrorMessage">
-            <div class="text-center text-danger mb-3">Error sending message!</div>
-        </div>
-
         <!-- Form submit button -->
         <div class="d-grid">
-            <button class="btn btn-primary btn-lg " id="submitButton" type="submit" >Submit</button><br>
+            <button type="submit" class="btn btn-primary">Submit</button>
         </div>
 
     </form>

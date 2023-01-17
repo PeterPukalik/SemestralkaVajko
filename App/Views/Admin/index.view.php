@@ -14,7 +14,7 @@
 
     <title>Home</title>
 </head>
-<div class="bodysize">
+<div class="bodysize ">
 <div class="container-fluid">
     <div class="row">
         <div class="col">
@@ -44,7 +44,7 @@
                 <h5 class="card-title">Edituj krajiny</h5>
                 <p class="card-text">Pridavaj a odoberaj krajiny z ponuky.</p>
                 <a href="?c=sale&a=add" class="btn btn-primary">Pridavaj krajiny</a>
-                <a href="?c=home" class="btn btn-danger">Odoberaj/Edituj krajiny</a>
+                <a href="?c=sale" class="btn btn-danger">Odoberaj/Edituj krajiny</a>
             </div>
         </div>
     </div>
@@ -53,8 +53,7 @@
             <div class="card-body">
                 <h5 class="card-title">Edituj Stolarske vyrobky</h5>
                 <p class="card-text">Pridavaj a odoberaj vyrobky z ponuky.</p>
-                <a href="?c=sale&a=add" class="btn btn-primary">Pridavaj vyrobky</a>
-                <a href="?c=home" class="btn btn-danger">Odoberaj/Edituj vyrobky</a>
+                <a href="?c=carpenter&a=add" class="btn btn-primary">Pridavaj vyrobky</a>
             </div>
         </div>
     </div>

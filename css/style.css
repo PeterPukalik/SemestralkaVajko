@@ -85,7 +85,13 @@ body {
         margin: 0 auto;
         padding-bottom: 10px;
     }
+    .materialypictues{
+        display: flex;
+        flex-direction: column;
+    }
+
 }
+
 
 .center{
     text-align: center;
@@ -234,12 +240,18 @@ p{
 }
 .materialypictues{
     display: flex;
+    flex-wrap: wrap;
+    overflow:hidden;
 }
 .materialypicturesinsidediv{
-    max-width: 100%;
+    max-width: calc(50% - 20px);
     max-height: 500px;
     flex: 1;
     padding: 10px;
+
+}
+.materialypicturesinsidediv img{
+    width: 100%;
 }
 .bodysize{
     min-height: 100vh;
@@ -247,4 +259,7 @@ p{
 
 .carpenterCard{
     max-width: 22rem;
+}
+input.invalid {
+    border: 1px solid red;
 }

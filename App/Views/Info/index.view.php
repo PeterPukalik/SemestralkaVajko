@@ -4,7 +4,7 @@
 <header>
     <h1>Technicke Informacie</h1>
 </header>
-<div class="wrapper">
+<div class="wrapper ">
     <div class="insideDiv">
         <p class="grey">Stenový profil BSH DUO:</p>
 

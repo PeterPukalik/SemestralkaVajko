@@ -38,13 +38,13 @@ window.onresize = function() {
         document.getElementById("cardsbootstrap").classList.add("row");
     }
 }
-// window.onload = function() {
-//     if (window.innerWidth < 600) {
-//         document.getElementById("cardsbootstrap").classList.remove("row");
-//     }if (window.innerWidth > 601){
-//         document.getElementById("cardsbootstrap").classList.add("row");
-//     }
-// }
+window.onload = function() {
+    if (window.innerWidth < 600) {
+        document.getElementById("cardsbootstrap").classList.remove("row");
+    }if (window.innerWidth > 601){
+        document.getElementById("cardsbootstrap").classList.add("row");
+    }
+}
 
 function valideSaleForm() {
     let name = document.forms["addSale"]["name"].value;
@@ -72,4 +72,63 @@ function valideSaleForm() {
     }
 
     return true;
+}
+
+function validateCarpenterForm() {
+    let name = document.forms["addCarpenter"]["name"].value;
+    if (name === "" ) {
+        alert("Name must be filled out");
+        return false;
+    }
+    if ( name.length > 100) {
+        alert("meno musi byt kratsie ako 100 znakov");
+        return false;
+    }
+    let picture = document.forms["addCarpenter"]["picture"].value;
+    if (picture === "" ) {
+        alert("picture must be filled out");
+        return false;
+    }
+    if ( picture.length > 500) {
+        alert("picture musi byt kratsie ako 500 znakov");
+        return false;
+    }
+}
+
+function validateContactForm(){
+    var inputs = document.querySelectorAll("#contactForm input, #contactForm textarea");
+    var valid = true;
+
+    for (var i = 0; i < inputs.length; i++) {
+        if (inputs[i].value === "") {
+            inputs[i].classList.add("invalid");
+            valid = false;
+        } else {
+            inputs[i].classList.remove("invalid");
+        }
+    }
+
+    if (!valid) {
+        alert("Please fill out all fields.");
+    }
+
+    return valid;
+}
+function confirmDeleteCarpenter(id) {
+    if (confirm("Are you sure you want to delete this item?")) {
+        window.location.href = "?c=carpenter&a=delete&id="+ id;
+    }
+    return false;
+}
+function confirmSaleDele(id) {
+    if (confirm("Are you sure you want to delete this item?")) {
+        window.location.href = "?c=sale&a=delete&id="+ id;
+    }
+    return false;
+}
+function confirmHomeDel(id) {
+    if (confirm("Are you sure you want to delete this item?")) {
+        window.location.href = "?c=houses&a=delete&id="+ id;
+    }
+    return false;
 }

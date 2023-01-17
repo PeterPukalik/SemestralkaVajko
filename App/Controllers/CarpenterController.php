@@ -20,4 +20,50 @@ class CarpenterController extends AControllerBase
         $data = Carpenter::getAll();
         return $this->html($data);
     }
+
+    public function add() : Response
+    {
+        $data = $this->request()->getPost();
+        if(isset($data["name"])) {
+            $name = $_POST['name'];
+            $picture = $_POST['picture'];
+
+            if($name =='' || $picture == '' ){
+                $data = ['error' => 'musis vyplnit vsetko'];
+                return $this->html($data);
+            }
+            elseif(!(strlen($name) > 0) && !(strlen($name) < 100)){
+                $data = ['error' => 'Neplatny nazov'];
+                return $this->html($data);
+                //echo "<div class='text-danger'>Nazov musi byt vyplneny</div><br>";
+
+            }
+            elseif(!(strlen($picture) > 0) && !(strlen($picture) < 500)){
+                $data = ['error' => 'Neplatny nazov'];
+                return $this->html($data);
+                //echo "<div class='text-danger'>Nazov musi byt vyplneny</div><br>";
+
+            }
+            else{
+                $item = new Carpenter();
+                $item->setName($data['name']);
+                $item->setPicture($data['picture']);
+                $item->save();
+            }
+        }
+
+
+        return $this->html(new Carpenter());
+    }
+
+    public function delete(): Response
+    {
+        $id = $this->request()->getValue("id");
+        $sale = Carpenter::getOne($id);
+        if($sale != null){
+            $sale->delete();
+        }
+
+        return $this->redirect("?c=carpenter");
+    }
 }

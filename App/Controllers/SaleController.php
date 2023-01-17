@@ -66,11 +66,14 @@ class SaleController extends AControllerBase
                 //echo "<div class='text-danger'>Nazov musi byt vyplneny</div><br>";
 
             }
-            $sale = new Sale();
-            $sale->setCity($data["city"]);
-            $sale->setName($data["name"]);
-            $sale->setPhoto($data["photo"]);
-            $sale->save();
+            else{
+                $sale = new Sale();
+                $sale->setCity($data["city"]);
+                $sale->setName($data["name"]);
+                $sale->setPhoto($data["photo"]);
+                $sale->save();
+            }
+
         }
         return $this->html(new Sale());
     }

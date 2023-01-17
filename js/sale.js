@@ -14,4 +14,5 @@ async function getSales() {
 }
 
 
-//window.onload = getSales();
+window.onload = getSales();
+setInterval(getSales, 10000);
