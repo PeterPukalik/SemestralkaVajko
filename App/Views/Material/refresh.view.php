@@ -3,7 +3,7 @@
 $layout = "no";
 ?>
 
-
+<script src="js/myScript.js"></script>
 
 <h3>Makke drevo</h3>
 <table class="table">
@@ -25,7 +25,9 @@ $layout = "no";
         <td><?=$item->getBenefits()?></td>
         <td><?=$item->getBenefits()?></td>
         <?php if ($auth->getLoggedUserName()=='admin') { ?>
-            <td><a href="?c=sale&a=delete&id=<?=$item->getId()?>" class="btn btn-danger">Delete</a></td>
+            <td>
+                 <a href="#" class="btn btn-danger" onclick="return confirmMaterialDel(<?=$item->getId()?>)">Delete</a>
+            </td>
         <?php }?>
     </tr>
     <?php }?>
@@ -54,7 +56,9 @@ $layout = "no";
                 <td><?=$item->getBenefits()?></td>
                 <td><?=$item->getBenefits()?></td>
                 <?php if ($auth->getLoggedUserName()=='admin') { ?>
-                    <td><a href="?c=sale&a=delete&id=<?=$item->getId()?>" class="btn btn-danger">Delete</a></td>
+                    <td>
+                        <a href="#" class="btn btn-danger" onclick="return confirmMaterialDel(<?=$item->getId()?>)">Delete</a>
+                    </td>
                 <?php }?>
             </tr>
         <?php }?>

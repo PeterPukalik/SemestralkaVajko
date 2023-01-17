@@ -1,5 +1,5 @@
 
-<script src="js/myScript.js"></script>
+
 <script src="js/material.js"></script>
 
 

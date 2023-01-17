@@ -132,3 +132,9 @@ function confirmHomeDel(id) {
     }
     return false;
 }
+function confirmMaterialDel(id){
+    if (confirm("Are you sure you want to delete this item?")) {
+        window.location.href = "?c=material&a=delete&id="+ id;
+    }
+    return false;
+}
