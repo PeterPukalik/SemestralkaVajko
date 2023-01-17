@@ -33,7 +33,7 @@ class HousesController extends  AControllerBase
                 return $this->html($data);
                 //echo "<div class='text-danger'>Zadal si neplatnu sumu, musi obsahovat len cisla</div><br>";
             }
-            elseif(!(strlen($nazov) > 0) && !(strlen($nazov) < 100)){
+            elseif(!(strlen($nazov) > 0) || !(strlen($nazov) < 100)){
                 $data = ['error' => 'Nazov musi byt vyplneny'];
                 return $this->html($data);
                 //echo "<div class='text-danger'>Nazov musi byt vyplneny</div><br>";
@@ -64,9 +64,7 @@ class HousesController extends  AControllerBase
                 $post->setInfo($data["info"]);
                 $post->setCena($data["cena"]);
                 $post->save();
-//                ?><!--<script>-->
-<!--                    window.open("?c=home", "_blank"); // will open new tab on window.onload-->
-<!--                </script>--><?php
+
             }
 
         }
@@ -122,7 +120,7 @@ class HousesController extends  AControllerBase
             if(!preg_match("/[0-9]/",$cena)) {
                 echo "<div class='text-danger'>Zadal si neplatnu sumu, musi obsahovat len cisla</div><br>";
             }
-            elseif(!(strlen($nazov) > 0) && !(strlen($nazov) < 100)){
+            elseif(!(strlen($nazov) > 0) || !(strlen($nazov) < 100)){
                 echo "<div class='text-danger'>Nazov musi byt vyplneny</div><br>";
 
             }
@@ -138,16 +136,14 @@ class HousesController extends  AControllerBase
                 echo "<div class='text-danger'>info musi byt vyplneny</div><br>";
             }
             else {
-                $post = new Houses();
+//                $post = new Houses();
                 $post->setNazov($data["nazov"]);
                 $post->setPopis($data["popis"]);
                 $post->setFoto($data["foto"]);
                 $post->setInfo($data["info"]);
                 $post->setCena($data["cena"]);
                 $post->save();
-                ?><script>
-                    window.open("?c=home", "_blank"); // will open new tab on window.onload
-                </script><?php
+
             }
 
         }

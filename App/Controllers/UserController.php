@@ -58,7 +58,7 @@ class UserController extends AControllerBase
             $password = password_hash($data["password"], PASSWORD_BCRYPT);
             $user->setPassword($password);
             $user->save();
-            return $this->html("?=home");
+            return $this->redirect("?c=auth&a=login");
         }
         return $this->html();
     }

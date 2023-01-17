@@ -15,10 +15,12 @@
             <td><?=$item->getName()?></td>
             <td><?=$item->getCity()?></td>
             <td>
+                <?php if ($auth->isLogged()) { ?>
                 <?php if($auth->getLoggedUserName() == 'admin' ){?>
                     <a href="?c=sale&a=edit&id=<?=$item->getId()?>" class="btn btn-secondary">Edit</a>
 
                     <a href="#" class="btn btn-danger" onclick="return confirmSaleDele (<?=$item->getId()?>)">Delete</a>
+            <?php }?>
             <?php }?>
 
             </td>

@@ -48,19 +48,19 @@ class SaleController extends AControllerBase
                 $data = ['error' => 'musis vyplnit vsetko'];
                 return $this->html($data);
             }
-            elseif(!(strlen($city) > 0) && !(strlen($city) < 100) ){
+            elseif(!(strlen($city) > 0) || !(strlen($city) < 100) ){
                 $data = ['error' => 'neyplnena mesto'];
                 return $this->html($data);
                 //echo "<div class='text-danger'>Nazov musi byt vyplneny</div><br>";
 
             }
-            elseif(!(strlen($name) > 0) && !(strlen($name) < 100)){
+            elseif(!(strlen($name) > 0) || !(strlen($name) < 100)){
                 $data = ['error' => 'Neplatny nazov'];
                 return $this->html($data);
                 //echo "<div class='text-danger'>Nazov musi byt vyplneny</div><br>";
 
             }
-            elseif(!(strlen($photo) > 0) && !(strlen($photo) < 500)){
+            elseif(!(strlen($photo) > 0) || !(strlen($photo) < 500)){
                 $data = ['error' => 'Neplatny nazov'];
                 return $this->html($data);
                 //echo "<div class='text-danger'>Nazov musi byt vyplneny</div><br>";

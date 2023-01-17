@@ -4,6 +4,10 @@ nav {
 body {
     background-color: #EFEDE2;
 }
+.color {
+    background-color: #EFEDE2;
+}
+
 .footer {
     background-color: lightgrey;
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);

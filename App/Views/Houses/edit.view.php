@@ -5,7 +5,9 @@
 <form action="?c=houses&a=edit" method="post" name="addHouse" onsubmit="return validateForm()" >
 
     <div class="form-group">
-
+        <?php foreach ($data as $item) { ?>
+            <div class='text-danger'><?=@$item?></div><br>
+        <?php }?>
         <label>Nazov</label>
         <textarea name="nazov" id="nazov" class="form-control" rows="3" placeholder="<?=$data->getNazov()?>"><?=$data->getNazov()?></textarea>
         <label>Popis</label>
