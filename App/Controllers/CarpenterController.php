@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Core\AControllerBase;
+use App\Core\Responses\JsonResponse;
 use App\Core\Responses\Response;
 use App\Models\Carpenter;
 
@@ -19,6 +20,11 @@ class CarpenterController extends AControllerBase
     {
         $data = Carpenter::getAll();
         return $this->html($data);
+    }
+    public function get(): JsonResponse
+    {
+        $data = Carpenter::getAll();
+        return $this->json($data);
     }
 
     public function add() : Response

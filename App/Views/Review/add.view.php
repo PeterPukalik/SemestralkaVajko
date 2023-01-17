@@ -6,7 +6,7 @@
 
 <script src="js/review.js"></script>
 <div class="bodysize">
-    <form action="?c=review&a=add" method="post" id="reviewform"  >
+    <form action="?c=review&a=add" method="post" id="reviewform">
         <div class='text-danger'><?=@$data['error']?></div><br>
         <div class="form-group">
             <label>Meno</label>

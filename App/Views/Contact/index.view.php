@@ -3,7 +3,7 @@
     <title>DrevodomySlovakia - Kontakt</title>
     <script src="js/myScript.js"></script>
 </head>
-<div class="container py-4">
+<div class="container py-4 bodysize">
     <h1>Kontaktuje nas</h1>
     <form id="contactForm" name="contactForm" action="" method="post" onsubmit="return validateContactForm()" action="?c=contact">
         <div class="mb-3">

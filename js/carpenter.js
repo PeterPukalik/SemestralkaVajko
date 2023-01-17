@@ -16,3 +16,10 @@ async function getCarpenter() {
 
 window.onload = getCarpenter();
 
+// Get the carousel element
+var carousel = document.getElementById("carouselExampleControls");
+
+// Use setInterval to call the next() function every 5 seconds
+setInterval(function() {
+    carousel.next();
+}, 5000);

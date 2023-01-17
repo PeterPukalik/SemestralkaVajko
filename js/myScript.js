@@ -138,3 +138,31 @@ function confirmMaterialDel(id){
     }
     return false;
 }
+
+async function filterProducts(search){
+    let response;
+    response = await fetch("?c=carpenter&a=get");
+    let products = await response.json();
+    let filtredProdutcs = products.filter( products=>products.name.toLowerCase().includes(search.toLowerCase()));
+    dispayProducts(filtredProdutcs);
+}
+
+
+function dispayProducts(filtredProducts) {
+    document.getElementById('carpenter').innerHTML = '';
+
+        for(let products of filtredProducts){
+            const productElement = document.createElement('product.name');
+            productElement.classList.add("carpenterCard");
+            productElement.classList.add("card");
+            productElement.innerHTML = `    
+                        <h5 class="card-title">${products.name}</h5>\n 
+                        <img class="card-img-top" src='${products.picture}' alt="Card image cap">`;
+
+            document.getElementById('carpenter').appendChild(productElement);
+        }
+
+}
+
+
+

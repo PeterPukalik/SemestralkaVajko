@@ -3,6 +3,7 @@
 $layout = "no";
 ?>
 <script src="js/myScript.js"></script>
+<script src="js/myScript.js"></script>
 <div class="row ">
     <?php foreach ($data as $item) { ?>
     <div class="card carpenterCard">
@@ -16,4 +17,5 @@ $layout = "no";
     </div>
     <?php }?>
 </div>
+
 
