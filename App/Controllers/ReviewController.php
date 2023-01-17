@@ -29,25 +29,18 @@ class ReviewController extends AControllerBase
             if(!preg_match("/[0-6]/",$stars)) {
                 $data = ['error' => 'Zadal si neplatnu ohodnotenie, musi obsahovat len cisla'];
                 return $this->html($data);
-                //echo "<div class='text-danger'>Zadal si neplatnu sumu, musi obsahovat len cisla</div><br>";
             }
             elseif(!(strlen($name) > 0) && !(strlen($name) < 100)){
                 $data = ['error' => 'Neplatny loggin'];
                 return $this->html($data);
-                //echo "<div class='text-danger'>Nazov musi byt vyplneny</div><br>";
-
             }
             elseif(!(strlen($recenzia) > 0) && !(strlen($recenzia) < 1000)){
                 $data = ['error' => 'neyplnena review'];
                 return $this->html($data);
-                //echo "<div class='text-danger'>Nazov musi byt vyplneny</div><br>";
-
             }
             elseif(!(strlen($city) > 0) && !(strlen($city) < 150)){
                 $data = ['error' => 'neyplnena mesto'];
                 return $this->html($data);
-                //echo "<div class='text-danger'>Nazov musi byt vyplneny</div><br>";
-
             }
 
 

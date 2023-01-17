@@ -8,7 +8,7 @@ class Sale extends Model
 {
 
     protected int $id;
-    protected string $name='';
+    protected string $name;
     protected string $photo;
     protected string $city;
 

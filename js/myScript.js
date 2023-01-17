@@ -46,3 +46,30 @@ window.onresize = function() {
 //     }
 // }
 
+function valideSaleForm() {
+    let name = document.forms["addSale"]["name"].value;
+    if (name === "" ) {
+        alert("Name must be filled out");
+        return false;
+    }
+    if ( name.length > 100) {
+        alert("meno musi byt kratsie ako 100 znakov");
+        return false;
+    }
+    let city = document.forms["addSale"]["city"].value;
+    if(city === "") {
+        alert("Musis zadat city");
+        return false;
+    }
+    if(city.length <= 4 && city.length > 100){
+        alert("city musi obsahovat aspon 4 znakov");
+        return false;
+    }
+    let photo = document.forms["addSale"]["photo"].value;
+    if (photo === "" || photo.length > 500) {
+        alert("musis zadat odkaz alebo cestu k fotke");
+        return false;
+    }
+
+    return true;
+}

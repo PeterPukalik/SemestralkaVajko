@@ -4,7 +4,9 @@
 <script src="js/myScript.js"></script>
 <form action="?c=houses&a=add" method="post" name="addHouse" onsubmit="return validateForm()" >
     <div class="form-group">
-        <div class='text-danger'><?=@$data['error']?></div><br>
+        <?php foreach ($data as $item) { ?>
+            <div class='text-danger'><?=@$item?></div><br>
+        <?php }?>
         <label>Nazov</label>
         <textarea name="nazov" class="form-control" rows="3"></textarea>
         <label>Popis</label>

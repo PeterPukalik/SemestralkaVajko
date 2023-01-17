@@ -64,9 +64,9 @@ class HousesController extends  AControllerBase
                 $post->setInfo($data["info"]);
                 $post->setCena($data["cena"]);
                 $post->save();
-                ?><script>
-                    window.open("?c=home", "_blank"); // will open new tab on window.onload
-                </script><?php
+//                ?><!--<script>-->
+<!--                    window.open("?c=home", "_blank"); // will open new tab on window.onload-->
+<!--                </script>--><?php
             }
 
         }

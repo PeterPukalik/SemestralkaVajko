@@ -14,6 +14,7 @@
 
     <title>Home</title>
 </head>
+<div class="bodysize">
 <div class="container-fluid">
     <div class="row">
         <div class="col">
@@ -25,6 +26,7 @@
     </div>
 </div>
 <br>
+<?php if($auth->getLoggedUserName() == 'admin' ){?>
 <div class="row bodysize body">
     <div class="col-sm-6">
         <div class="card">
@@ -46,4 +48,16 @@
             </div>
         </div>
     </div>
+    <div class="col-sm-6">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Edituj Stolarske vyrobky</h5>
+                <p class="card-text">Pridavaj a odoberaj vyrobky z ponuky.</p>
+                <a href="?c=sale&a=add" class="btn btn-primary">Pridavaj vyrobky</a>
+                <a href="?c=home" class="btn btn-danger">Odoberaj/Edituj vyrobky</a>
+            </div>
+        </div>
+    </div>
+</div>
+<?php }?>
 </div>

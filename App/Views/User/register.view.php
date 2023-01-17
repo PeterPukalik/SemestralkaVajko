@@ -1,4 +1,4 @@
-<?php /* @var Array $data */ ?>
+<?php /* @var Array $data 8*/ ?>
 
 <form action="?c=user&a=register" method="post" name="register">
     <section class="vh-100" style="background-color: #eee;">

@@ -39,12 +39,38 @@ class SaleController extends AControllerBase
     {
         $data = $this->request()->getPost();
         if(isset($data["name"])){ //isset ci exizstuje a empty ci ej zadane cosi
+
+            $name = $_POST['name'];
+            $photo = $_POST['photo'];
+            $city = $_POST['city'];
+
+            if($name =='' || $photo == '' || $city == ''){
+                $data = ['error' => 'musis vyplnit vsetko'];
+                return $this->html($data);
+            }
+            elseif(!(strlen($city) > 0) && !(strlen($city) < 100) ){
+                $data = ['error' => 'neyplnena mesto'];
+                return $this->html($data);
+                //echo "<div class='text-danger'>Nazov musi byt vyplneny</div><br>";
+
+            }
+            elseif(!(strlen($name) > 0) && !(strlen($name) < 100)){
+                $data = ['error' => 'Neplatny nazov'];
+                return $this->html($data);
+                //echo "<div class='text-danger'>Nazov musi byt vyplneny</div><br>";
+
+            }
+            elseif(!(strlen($photo) > 0) && !(strlen($photo) < 500)){
+                $data = ['error' => 'Neplatny nazov'];
+                return $this->html($data);
+                //echo "<div class='text-danger'>Nazov musi byt vyplneny</div><br>";
+
+            }
             $sale = new Sale();
             $sale->setCity($data["city"]);
             $sale->setName($data["name"]);
             $sale->setPhoto($data["photo"]);
             $sale->save();
-            return $this->redirect("?c=home");
         }
         return $this->html(new Sale());
     }
@@ -57,6 +83,28 @@ class SaleController extends AControllerBase
         $data = $this->request()->getPost();
         if($sale != null){
             if(isset($data['name'])){
+                $name = $_POST['name'];
+                $photo = $_POST['photo'];
+                $city = $_POST['city'];
+            if(!(strlen($city) > 0) && !(strlen($city) < 100)){
+                $data = ['error' => 'neyplnena mesto'];
+                return $this->html($data);
+                //echo "<div class='text-danger'>Nazov musi byt vyplneny</div><br>";
+
+            }
+            elseif(!(strlen($name) > 0) && !(strlen($name) < 100)){
+                $data = ['error' => 'Neplatny nazov'];
+                return $this->html($data);
+                //echo "<div class='text-danger'>Nazov musi byt vyplneny</div><br>";
+
+            }
+            elseif(!(strlen($photo) > 0) && !(strlen($photo) < 500)){
+                $data = ['error' => 'Neplatny nazov'];
+                return $this->html($data);
+                //echo "<div class='text-danger'>Nazov musi byt vyplneny</div><br>";
+
+            }
+
                 $sale->setCity($data["city"]);
                 $sale->setName($data["name"]);
                 $sale->setPhoto($data["photo"]);
